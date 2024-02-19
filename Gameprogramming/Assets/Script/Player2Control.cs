@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player1Control : MonoBehaviour
+public class Player2Control : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float moveSpeed = 10.0f;
@@ -12,11 +12,11 @@ public class Player1Control : MonoBehaviour
     void Update()
     {
         float horizontalInput = 0f;
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             horizontalInput = -1f;
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
             horizontalInput = 1f;
         }
@@ -24,7 +24,7 @@ public class Player1Control : MonoBehaviour
         Vector2 movement = new Vector2(horizontalInput, 0f);
         rb.velocity = new Vector2(movement.x * moveSpeed, rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.C) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
         {
             Jump();
         }
