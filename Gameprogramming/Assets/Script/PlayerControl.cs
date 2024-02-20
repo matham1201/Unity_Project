@@ -24,7 +24,7 @@ public class Player1Control : MonoBehaviour
         Vector2 movement = new Vector2(horizontalInput, 0f);
         rb.velocity = new Vector2(movement.x * moveSpeed, rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.C) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             Jump();
         }
