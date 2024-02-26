@@ -1,27 +1,38 @@
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class ScoreDisplay : MonoBehaviour
 {
-    public Text scoreText; 
+    // Référence au texte affichant le score
+    private Text scoreText;
 
-    private int ScoreNumber;
+    // Compteur de buts
+    private int goalsScored = 0;
 
-    void Start()
+    // Appelé une fois au démarrage du jeu
+    private void Start()
     {
-       ScoreNumber = 0;
-       scoreText.text = "Score: " + ScoreNumber;
+        // Trouver le composant Text
+        scoreText = GetComponent<Text>();
+
+        // Mettre à jour le texte pour afficher le score initial
+        UpdateScoreText();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    // Méthode pour mettre à jour le texte affichant le score
+    private void UpdateScoreText()
     {
-        if (other.CompareTag("Ball"))
-        {
-            ScoreNumber++;
-            scoreText.text = "Score: " + ScoreNumber;
-        }
+        // Mettre à jour le texte avec le nombre de buts marqués
+        scoreText.text = "Goals Scored: " + goalsScored;
     }
-                
-    
+
+    // Méthode appelée lorsque le collider est touché
+    public void IncrementScore()
+    {
+        // Incrémenter le compteur de buts
+        goalsScored++;
+
+        // Mettre à jour le texte affichant le score
+        UpdateScoreText();
+    }
 }
