@@ -4,7 +4,7 @@ public class Player1Control : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float moveSpeed = 10.0f;
-    public float jumpForce = 5.0f;
+    public float jumpForce = 20.0f;
     private bool isGrounded;
 
     void Update()
