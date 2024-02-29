@@ -20,11 +20,11 @@ public class Timer : MonoBehaviour
                 gameRunning = false;
                 Debug.Log("La partie est terminée.");
 
-                #if UNITY_EDITOR
-                    UnityEditor.EditorApplication.isPlaying = false;
-                #else
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+#else
                     Application.Quit(); 
-                #endif
+#endif
             }
         }
     }
@@ -34,6 +34,6 @@ public class Timer : MonoBehaviour
         int minutes = Mathf.FloorToInt(timeElapsed / 60f);
         int seconds = Mathf.FloorToInt(timeElapsed % 60f);
 
-        timerText.text = string.Format("{0:00}:{3:00}", minutes, seconds);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
