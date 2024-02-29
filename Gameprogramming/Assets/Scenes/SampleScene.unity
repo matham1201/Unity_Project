@@ -795,7 +795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 362864188}
   moveSpeed: 10
-  jumpForce: 10
+  jumpForce: 20
 --- !u!61 &362864187
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -856,7 +856,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1.1
+  m_GravityScale: 4.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -966,6 +966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 441449162}
   - component: {fileID: 441449161}
+  - component: {fileID: 441449163}
   m_Layer: 0
   m_Name: Stadium
   m_TagString: Untagged
@@ -1040,6 +1041,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &441449163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441449160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50de62534c0d94ca6a4bfba956153d65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreTextPlayer1: {fileID: 0}
+  scoreTextPlayer2: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1529,7 @@ GameObject:
   - component: {fileID: 910221341}
   - component: {fileID: 910221344}
   - component: {fileID: 910221343}
+  - component: {fileID: 910221345}
   m_Layer: 5
   m_Name: score
   m_TagString: Untagged
@@ -1553,7 +1569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1582,6 +1598,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910221340}
   m_CullTransparentMesh: 1
+--- !u!114 &910221345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910221340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50de62534c0d94ca6a4bfba956153d65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreTextPlayer1: {fileID: 910221343}
+  scoreTextPlayer2: {fileID: 910221343}
 --- !u!1 &939847079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,7 +2215,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1.1
+  m_GravityScale: 4.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2211,7 +2241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1359355151}
   moveSpeed: 10
-  jumpForce: 10
+  jumpForce: 20
 --- !u!95 &1359355153
 Animator:
   serializedVersion: 5
