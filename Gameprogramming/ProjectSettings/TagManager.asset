@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - Ball
+  - collision
+  - Collision_Left
+  - Anime_Goal_Left
   layers:
   - Default
   - TransparentFX
